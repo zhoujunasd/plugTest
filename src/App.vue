@@ -2,8 +2,8 @@
   <div id="app">
     <img src="./assets/logo.png" />
     <h1>{{ msg }}</h1>
-    <plugTest></plugTest>
-    <h2>Essential Links</h2>
+    <!-- <plugTest></plugTest> -->
+    <h2 @click="handleClick">Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
       <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
@@ -35,6 +35,12 @@ export default {
     return {
       msg: "Welcome to Your Vue.js App"
     };
+  },
+  mounted() {},
+  methods: {
+    handleClick() {
+      this.$toast.success("asd", { duration: 1000 });
+    }
   }
 };
 </script>
